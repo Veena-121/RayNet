@@ -1,4 +1,4 @@
-/* Solar Energy Color Palette */
+/*Color Palette */
 :root {
     --solar-orange: #FF6B35;
     --solar-yellow: #FFD23F;
@@ -270,7 +270,7 @@ body {
     text-decoration: underline;
 }
 
-/* Illustration Panel */
+
 .illustration-panel {
     flex: 1;
     position: relative;
@@ -377,19 +377,6 @@ body {
     }
 }
 
-.main-illustration {
-    z-index: 10;
-    position: relative;
-}
-
-.placeholder-illustration {
-    text-align: center;
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 2px dashed var(--solar-orange);
-}
 
 .main-icon {
     font-size: 4rem;
@@ -404,29 +391,7 @@ body {
     font-size: 1.1rem;
 }
 
-.resize-handle {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--solar-gray);
-    cursor: nw-resize;
-    transition: all 0.3s ease;
-}
 
-.resize-handle:hover {
-    background: var(--solar-orange);
-    color: white;
-    transform: scale(1.1);
-}
-
-/* Responsive Design */
 @media (max-width: 1024px) {
     .main {
         flex-direction: column;

@@ -1,4 +1,4 @@
-
+//to the dashboard
 document.getElementById('signinForm').addEventListener('submit', function(e) {
 e.preventDefault();
 

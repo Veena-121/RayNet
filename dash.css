@@ -126,7 +126,7 @@ header {
     box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
 }
 
-/* Calendar Styles */
+/* Calendar  */
 .calendar-container {
     grid-column: span 2;
 }
@@ -207,7 +207,7 @@ header {
     background-color: #9b59b6;
 }
 
-/* Month Navigation */
+/* Month */
 .month-nav {
     display: flex;
     justify-content: space-between;
@@ -236,7 +236,7 @@ header {
     color: #2c3e50;
 }
 
-/* Modal Styles */
+
 .modal {
     display: none;
     position: fixed;
