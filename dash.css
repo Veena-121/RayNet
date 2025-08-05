@@ -1,0 +1,350 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f7f9 0%, #e8f4f8 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #f9c349 0%, #f7b733 100%);
+    padding: 25px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e6ed;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #f9c349;
+    padding-bottom: 10px;
+}
+
+.energy-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 10px 0;
+}
+
+.contribution-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.contribution-item:last-child {
+    border-bottom: none;
+}
+
+.contributor-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.contribution-amount {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Event Booking Styles */
+.booking-section {
+    grid-column: 1 / -1;
+}
+
+.booking-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.event-btn {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.event-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.event-btn.wedding {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.event-btn.festival {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+.event-btn.meeting {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
+}
+
+/* Calendar Styles */
+.calendar-container {
+    grid-column: span 2;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.calendar-header {
+    background-color: #34495e;
+    color: white;
+    padding: 15px 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.calendar-day {
+    background-color: white;
+    min-height: 80px;
+    padding: 8px;
+    position: relative;
+    border: 1px solid #ecf0f1;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-day:hover {
+    background-color: #f8f9fa;
+}
+
+.calendar-day.other-month {
+    background-color: #f8f9fa;
+    color: #bdc3c7;
+}
+
+.calendar-day.today {
+    background-color: #f9c349;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.calendar-day.has-event {
+    background-color: #e8f6f3;
+    border-left: 4px solid #27ae60;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event-indicator {
+    font-size: 0.7rem;
+    background-color: #27ae60;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin: 2px 0;
+    display: block;
+    text-align: center;
+}
+
+.event-indicator.wedding {
+    background-color: #e74c3c;
+}
+
+.event-indicator.festival {
+    background-color: #f39c12;
+}
+
+.event-indicator.meeting {
+    background-color: #9b59b6;
+}
+
+/* Month Navigation */
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.month-nav button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.month-nav button:hover {
+    background: #2980b9;
+}
+
+.current-month {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #f9c349;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #229954;
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    }
+    
+    .calendar-container {
+    grid-column: span 1;
+    }
+    
+    .calendar-day {
+    min-height: 60px;
+    padding: 4px;
+    }
+    
+    .booking-buttons {
+    grid-template-columns: 1fr;
+    }
+}
