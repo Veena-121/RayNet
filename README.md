@@ -35,7 +35,7 @@ Think of it as a **community library**, but for clean energy.
 ## 💻 Tech Stack
 
 - **HTML5 / CSS3**
-- **JavaScript (Vanilla)**
+- **JavaScript**
 - Responsive Design Principles
 - Currently no backend (data simulated)
 
@@ -45,7 +45,7 @@ Think of it as a **community library**, but for clean energy.
 
 1. Open the project in a browser or live server.
 2. Login with:
-   - **User ID:** `admin`
+   - **EMAIL:** `admin@gmail.com`
    - **Password:** `solar`
 3. View dashboard activity and simulated community usage.
 
@@ -79,7 +79,6 @@ Want to help bring RayNet to life? Fork it, play with the logic, or suggest impr
 
 ---
 
-## ⚡ License
 
 MIT License
 
